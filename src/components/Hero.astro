@@ -1,5 +1,8 @@
 ---
 import svgPinkStar from '../assets/pink-star.svg'
+import redStar from '../assets/red-star.svg'
+import blueStar from '../assets/blue-star-card.svg'
+import hl from '../assets/hl.svg'
 ---
 
 <section class="relative max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
@@ -29,15 +32,25 @@ import svgPinkStar from '../assets/pink-star.svg'
 
   </div>
 
-  <!-- IMAGEN -->
-  <div class="flex-1 flex justify-center">
+  <!-- IMAGEN CON DECORACIONES -->
+  <div class="flex-1 flex justify-center relative">
 
-    <div class="border-4 border-black p-3 bg-white shadow-[6px_6px_0px_black]">
+    <!-- Red Star -->
+    <img src={redStar.src} alt="decor" class="absolute -bottom-6 -right-6 w-14 md:w-16 z-10" />
+
+    <!-- Blue Star -->
+    <img src={blueStar.src} alt="decor" class="absolute -top-6 -left-6 w-14 md:w-16 z-10" />
+
+    <!-- HL Icon -->
+    <img src={hl.src} alt="decor" class="absolute top-4 -right-8 w-10 md:w-12 z-10" />
+
+    <!-- Marco -->
+    <div class="border-4 border-black p-3 bg-white shadow-[6px_6px_0px_black] relative">
 
       <img
         src="/Foto.jpeg"
         alt="Thomy"
-        class="w-[220px] md:w-[260px] h-auto object-cover"
+        class="w-[280px] md:w-[320px] h-auto object-cover"
       />
 
     </div>

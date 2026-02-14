@@ -7,18 +7,40 @@ const items = [
   { title: "Bruno Mars", img: "/brunomars.jpeg", rotate: "-rotate-2", tag: "Hits 🎶" },
   { title: "Mora", img: "/mora.jpeg", rotate: "rotate-2", tag: "Flow 🌙" },
 ]
+
+const qualities = [
+  "RESPONSABLE", "AMOROSO", "LÍDER", "RESPETUOSO", "APASIONADO", "BUGGY",
+  "FAMILIA", "FÚTBOL", "MESSI", "ALEGRE", "EMPÁTICO", "DISCIPLINA",
+  "CONSTANCIA", "COMPROMISO", "ENERGÍA", "CREATIVO", "HUMILDE", "DEDICACIÓN",
+]
 ---
 
 <section class="max-w-6xl mx-auto px-6 py-16">
-  <div class="flex items-end justify-between gap-6 flex-wrap">
+
+  <!-- BARRA NEGRA DESLIZANTE -->
+  <div class="border-3 border-black bg-black text-white overflow-hidden">
+    <div class="marquee flex gap-8 py-3 font-bold uppercase whitespace-nowrap">
+      {[...qualities, ...qualities].map((w) => (
+        <span class="inline-flex items-center gap-2">
+          <span class="text-[var(--yellow)]">✦</span>
+          {w}
+        </span>
+      ))}
+    </div>
+  </div>
+
+  <!-- TITULO + TEXTO -->
+  <div class="mt-10 flex items-end justify-between gap-6 flex-wrap">
     <h2 class="text-4xl md:text-6xl font-extrabold">
-      Lo que <span class="bg-[var(--yellow)] px-3 py-1 inline-block">me mueve</span>
+      Mi <span class="bg-[var(--yellow)] px-3 py-1 inline-block">inspiración</span>
     </h2>
+
     <p class="text-lg md:text-xl max-w-xl">
-      Cosas que me inspiran y me representan (sí, aquí está Buggy 🐶).
+      Todos necesitamos un poco...
     </p>
   </div>
 
+  <!-- COLLAGE -->
   <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {items.map((it) => (
       <article class={`relative ${it.rotate} transition-all duration-300 hover:rotate-0 hover:scale-[1.02]`}>
@@ -42,4 +64,17 @@ const items = [
       </article>
     ))}
   </div>
+
 </section>
+
+<style>
+  .marquee {
+    animation: marquee 18s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>

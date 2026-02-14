@@ -11,18 +11,19 @@ const items = [
 const qualities = [
   "RESPONSABLE", "AMOROSO", "LÍDER", "RESPETUOSO", "APASIONADO",
   "FAMILIA", "FÚTBOL", "ALEGRE", "EMPÁTICO", "DISCIPLINA",
-  "CONSTANCIA", "COMPROMISO", "ENERGÍA", "CREATIVO", "HUMILDE", "DEDICACIÓN"
+  "CONSTANCIA", "COMPROMISO", "ENERGÍA", "CREATIVO",
+  "HUMILDE", "DEDICACIÓN"
 ]
 ---
 
-<section class="w-full py-16">
+<section class="w-full pt-6 pb-16">
 
-  <!-- BARRA DESLIZANTE GRANDE Y COMPLETA -->
+  <!-- BARRA DESLIZANTE GRANDE -->
   <div class="w-full border-y-4 border-black bg-black text-white overflow-hidden">
-    <div class="marquee flex gap-12 py-5 text-lg md:text-xl font-bold uppercase whitespace-nowrap">
+    <div class="marquee flex gap-16 py-7 text-xl md:text-2xl font-bold uppercase whitespace-nowrap">
       {[...qualities, ...qualities].map((w) => (
         <span class="inline-flex items-center gap-3">
-          <span class="text-[var(--yellow)] text-xl">✦</span>
+          <span class="text-[var(--yellow)] text-2xl">✦</span>
           {w}
         </span>
       ))}
@@ -36,7 +37,7 @@ const qualities = [
       Mi <span class="bg-[var(--yellow)] px-3 py-1 inline-block">inspiración</span>
     </h2>
 
-    <!-- TEXTO AHORA ABAJO -->
+    <!-- TEXTO -->
     <p class="mt-6 text-xl md:text-2xl max-w-xl">
       Todos necesitamos un poco...
     </p>
@@ -72,7 +73,7 @@ const qualities = [
 
 <style>
   .marquee {
-    animation: marquee 16s linear infinite;
+    animation: marquee 14s linear infinite;
     will-change: transform;
   }
 

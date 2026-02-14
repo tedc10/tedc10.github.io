@@ -5,56 +5,59 @@ import Footer from "../components/Footer.astro"
 ---
 
 <Layout>
-  <Header />
+  <div class="min-h-screen flex flex-col">
 
-  <section class="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-10 overflow-hidden">
+    <Header />
 
-    <!-- FONDO CON CUALIDADES PERSONALES -->
-    <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-6 place-items-center 
-                opacity-10 text-2xl md:text-3xl font-bold 
-                pointer-events-none select-none">
+    <!-- CONTENIDO CENTRAL -->
+    <main class="relative flex-1 flex items-center justify-center text-center px-6 overflow-hidden">
 
-      <span>RESPONSABLE</span>
-      <span>AMOROSO</span>
-      <span>LÍDER</span>
-      <span>RESPETUOSO</span>
-      <span>APASIONADO</span>
-      <span>BUGGY</span>
-      <span>FAMILIA</span>
-      <span>FÚTBOL</span>
-      <span>MESSI</span>
-      <span>ALEGRE</span>
-      <span>EMPÁTICO</span>
-      <span>DISCIPLINA</span>
-      <span>CONSTANCIA</span>
-      <span>COMPROMISO</span>
-      <span>ENERGÍA</span>
-      <span>CREATIVO</span>
-      <span>HUMILDE</span>
-      <span>DEDICACIÓN</span>
+      <!-- FONDO -->
+      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-4 place-items-center 
+                  opacity-10 text-xl md:text-2xl font-bold 
+                  pointer-events-none select-none">
 
-    </div>
+        <span>RESPONSABLE</span>
+        <span>AMOROSO</span>
+        <span>LÍDER</span>
+        <span>RESPETUOSO</span>
+        <span>APASIONADO</span>
+        <span>BUGGY</span>
+        <span>FAMILIA</span>
+        <span>FÚTBOL</span>
+        <span>MESSI</span>
+        <span>ALEGRE</span>
+        <span>EMPÁTICO</span>
+        <span>DISCIPLINA</span>
+        <span>CONSTANCIA</span>
+        <span>COMPROMISO</span>
+        <span>ENERGÍA</span>
+        <span>CREATIVO</span>
+        <span>HUMILDE</span>
+        <span>DEDICACIÓN</span>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="relative z-10 max-w-3xl">
+      </div>
 
-      <!-- TITULO -->
-      <h1 class="text-5xl md:text-7xl font-extrabold border-4 border-black px-8 py-6 bg-white shadow-[8px_8px_0px_black]">
-        Algo más sobre mí
-      </h1>
+      <!-- CONTENIDO -->
+      <div class="relative z-10 max-w-2xl">
 
-      <!-- BOTÓN -->
-      <a 
-        href="https://youtu.be/7p4uv-mc2v4"
-        target="_blank"
-        class="mt-8 inline-block text-2xl md:text-3xl font-bold bg-yellow-300 border-4 border-black px-12 py-5 shadow-[8px_8px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
-      >
-        Ver video completo
-      </a>
+        <h1 class="text-4xl md:text-6xl font-extrabold border-4 border-black px-8 py-6 bg-white shadow-[6px_6px_0px_black]">
+          Algo más sobre mí
+        </h1>
 
-    </div>
+        <a 
+          href="https://youtu.be/7p4uv-mc2v4"
+          target="_blank"
+          class="mt-6 inline-block text-xl md:text-2xl font-bold bg-yellow-300 border-4 border-black px-10 py-4 shadow-[6px_6px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
+        >
+          Ver video completo
+        </a>
 
-  </section>
+      </div>
 
-  <Footer />
+    </main>
+
+    <Footer />
+
+  </div>
 </Layout>

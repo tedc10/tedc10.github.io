@@ -32,25 +32,44 @@ import hl from '../assets/hl.svg'
 
   </div>
 
-  <!-- IMAGEN CON DECORACIONES -->
-  <div class="flex-1 flex justify-center relative">
+  <!-- IMAGEN -->
+  <div class="flex-1 flex justify-center">
 
-    <!-- Red Star -->
-    <img src={redStar.src} alt="decor" class="absolute -bottom-6 -right-6 w-14 md:w-16 z-10" />
+    <!-- CONTENEDOR RELATIVO PARA DECORACIONES -->
+    <div class="relative">
 
-    <!-- Blue Star -->
-    <img src={blueStar.src} alt="decor" class="absolute -top-6 -left-6 w-14 md:w-16 z-10" />
+      <!-- Marco -->
+      <div class="border-4 border-black p-3 bg-white shadow-[6px_6px_0px_black] relative">
 
-    <!-- HL Icon -->
-    <img src={hl.src} alt="decor" class="absolute top-4 -right-8 w-10 md:w-12 z-10" />
+        <img
+          src="/Foto.jpeg"
+          alt="Thomy"
+          class="w-[330px] md:w-[380px] h-auto object-cover"
+        />
 
-    <!-- Marco -->
-    <div class="border-4 border-black p-3 bg-white shadow-[6px_6px_0px_black] relative">
+      </div>
 
+      <!-- DECORACIONES PEGADAS AL MARCO -->
+
+      <!-- Blue Star arriba izquierda -->
       <img
-        src="/Foto.jpeg"
-        alt="Thomy"
-        class="w-[280px] md:w-[320px] h-auto object-cover"
+        src={blueStar.src}
+        alt="decor"
+        class="absolute -top-3 -left-3 w-12 md:w-14"
+      />
+
+      <!-- Red Star abajo derecha -->
+      <img
+        src={redStar.src}
+        alt="decor"
+        class="absolute -bottom-3 -right-3 w-12 md:w-14"
+      />
+
+      <!-- HL pegado lado derecho -->
+      <img
+        src={hl.src}
+        alt="decor"
+        class="absolute top-1/2 -right-6 -translate-y-1/2 w-10 md:w-12"
       />
 
     </div>

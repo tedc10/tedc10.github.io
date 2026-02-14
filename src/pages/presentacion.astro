@@ -7,21 +7,42 @@ import Footer from "../components/Footer.astro"
 <Layout>
   <Header />
 
-  <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+  <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
 
-    <!-- TÍTULO GRANDE -->
-    <h1 class="text-4xl md:text-6xl font-bold border-4 border-black px-6 py-4 bg-white shadow-[6px_6px_0px_black]">
-      Algo más sobre mí
-    </h1>
+    <!-- FONDO CON PALABRAS -->
+    <div class="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-10 place-items-center opacity-10 text-4xl md:text-6xl font-bold pointer-events-none select-none">
+      <span>ORACLE</span>
+      <span>MYSQL</span>
+      <span>SQL</span>
+      <span>NO SQL</span>
+      <span>UML</span>
+      <span>REACT</span>
+      <span>SPRING</span>
+      <span>API REST</span>
+      <span>DATABASE</span>
+      <span>ERD</span>
+      <span>BACKEND</span>
+      <span>FRONTEND</span>
+    </div>
 
-    <!-- BOTÓN GRANDE -->
-    <a 
-      href="https://youtu.be/7p4uv-mc2v4"
-      target="_blank"
-      class="mt-10 text-2xl font-bold bg-yellow-300 border-4 border-black px-10 py-4 shadow-[6px_6px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
-    >
-      Ver video completo
-    </a>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="relative z-10">
+      
+      <!-- TITULO MÁS GRANDE -->
+      <h1 class="text-5xl md:text-7xl font-extrabold border-4 border-black px-8 py-6 bg-white shadow-[8px_8px_0px_black]">
+        Algo más sobre mí
+      </h1>
+
+      <!-- BOTÓN -->
+      <a 
+        href="https://youtu.be/7p4uv-mc2v4"
+        target="_blank"
+        class="mt-12 inline-block text-2xl md:text-3xl font-bold bg-yellow-300 border-4 border-black px-12 py-5 shadow-[8px_8px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
+      >
+        Ver video completo
+      </a>
+
+    </div>
 
   </section>
 

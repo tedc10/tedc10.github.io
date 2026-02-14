@@ -3,25 +3,31 @@ import '../styles/global.css'
 import Layout from "../layouts/Layout.astro"
 
 import Header from '../components/Header.astro'
-import Hero from '../components/Hero.astro'
-import Tools from '../components/Tools.astro'
 import Footer from '../components/Footer.astro'
-import Reviews from '../components/Reviews.astro'
-import CallToAction from '../components/CallToAction.astro'
 import Works from '../components/Works.astro'
-import Service from '../components/Service.astro'
-
 ---
-
 
 <Layout>
   <Header />
-  <Hero />
-  <Tools />
-  <Service />
-  <Works />
-  <Reviews />
-  <CallToAction />
+
+  <!-- PRESENTACIÓN -->
+  <section id="presentacion" class="max-w-5xl mx-auto p-6 md:p-10">
+    <div class="border-3 border-black bg-white p-3 md:p-5">
+      <video
+        class="w-full h-auto border-2 border-black"
+        src="/20260214_124737.mp4"
+        controls
+        playsinline
+      >
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </section>
+
+  <!-- EVIDENCIAS -->
+  <section id="evidencias">
+    <Works />
+  </section>
+
   <Footer />
 </Layout>
-

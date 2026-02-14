@@ -1,10 +1,9 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+// astro.config.mjs
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
- vite: {
-   plugins: [tailwindcss()],
- }
+  site: "https://tedc10.github.io",
+  base: "/", // o lo puedes omitir
+  vite: { plugins: [tailwindcss()] },
 });

@@ -5,71 +5,75 @@ import blueStar from '../assets/blue-star-card.svg'
 import hl from '../assets/hl.svg'
 ---
 
-<section class="relative max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
+<section class="relative max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-16">
 
   <!-- TEXTO -->
   <div class="flex-1">
 
-    <img src={svgPinkStar.src} alt="star" width="60" class="mb-6" />
+    <img src={svgPinkStar.src} alt="star" width="70" class="mb-8" />
 
-    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+    <!-- TITULO MÁS GRANDE -->
+    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
       Algunas <br />
-      <span class="bg-[var(--yellow)] px-3 py-1 inline-block">
+      <span class="bg-[var(--yellow)] px-4 py-1 inline-block">
         curiosidades
       </span>
     </h1>
 
-    <p class="mt-6 text-lg max-w-md">
+    <!-- PÁRRAFO MÁS GRANDE -->
+    <p class="mt-8 text-xl md:text-2xl max-w-lg">
       Si quieres saber como pienso, mira lo que creo y amo, no te tomara mucho tiempo.
     </p>
 
-    <a
-      href="/presentacion"
-      class="mt-8 inline-block bg-blue-200 border-4 border-black px-8 py-3 rounded-full font-semibold shadow-[4px_4px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
-    >
-      vamos
-    </a>
+    <!-- BOTÓN + HL -->
+    <div class="mt-10 flex items-center gap-4">
+
+      <a
+        href="/presentacion"
+        class="inline-block bg-blue-200 border-4 border-black px-10 py-4 rounded-full text-xl md:text-2xl font-semibold shadow-[5px_5px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
+      >
+        vamos
+      </a>
+
+      <!-- HL AHORA JUNTO AL BOTÓN -->
+      <img
+        src={hl.src}
+        alt="decor"
+        class="w-12 md:w-14"
+      />
+
+    </div>
 
   </div>
 
   <!-- IMAGEN -->
   <div class="flex-1 flex justify-center">
 
-    <!-- CONTENEDOR RELATIVO PARA DECORACIONES -->
     <div class="relative">
 
-      <!-- Marco -->
-      <div class="border-4 border-black p-3 bg-white shadow-[6px_6px_0px_black] relative">
+      <!-- MARCO -->
+      <div class="border-4 border-black p-4 bg-white shadow-[8px_8px_0px_black] relative">
 
         <img
           src="/Foto.jpeg"
           alt="Thomy"
-          class="w-[330px] md:w-[380px] h-auto object-cover"
+          class="w-[380px] md:w-[430px] h-auto object-cover"
         />
 
       </div>
 
-      <!-- DECORACIONES PEGADAS AL MARCO -->
+      <!-- DECORACIONES PEGADAS -->
 
-      <!-- Blue Star arriba izquierda -->
       <img
         src={blueStar.src}
         alt="decor"
-        class="absolute -top-3 -left-3 w-12 md:w-14"
+        class="absolute -top-3 -left-3 w-14 md:w-16"
       />
 
-      <!-- Red Star abajo derecha -->
       <img
         src={redStar.src}
         alt="decor"
-        class="absolute -bottom-3 -right-3 w-12 md:w-14"
-      />
-
-      <!-- HL pegado lado derecho -->
-      <img
-        src={hl.src}
-        alt="decor"
-        class="absolute top-1/2 -right-6 -translate-y-1/2 w-10 md:w-12"
+        class="absolute -bottom-3 -right-3 w-14 md:w-16"
       />
 
     </div>

@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+---
+
+<Layout>
+  <Header />
+
+  <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+
+    <!-- TÍTULO GRANDE -->
+    <h1 class="text-4xl md:text-6xl font-bold border-4 border-black px-6 py-4 bg-white shadow-[6px_6px_0px_black]">
+      Algo más sobre mí
+    </h1>
+
+    <!-- BOTÓN GRANDE -->
+    <a 
+      href="https://youtu.be/7p4uv-mc2v4"
+      target="_blank"
+      class="mt-10 text-2xl font-bold bg-yellow-300 border-4 border-black px-10 py-4 shadow-[6px_6px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
+    >
+      Ver video completo
+    </a>
+
+  </section>
+
+  <Footer />
+</Layout>

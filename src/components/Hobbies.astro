@@ -16,13 +16,13 @@ const qualities = [
 ]
 ---
 
-<section class="w-full pt-6 pb-16">
+<section class="w-full pt-2 pb-16">
 
   <!-- BARRA DESLIZANTE GRANDE -->
   <div class="w-full border-y-4 border-black bg-black text-white overflow-hidden">
     <div class="marquee flex gap-16 py-7 text-xl md:text-2xl font-bold uppercase whitespace-nowrap">
       {[...qualities, ...qualities].map((w) => (
-        <span class="inline-flex items-center gap-3">
+        <span class="inline-flex items-center gap-4">
           <span class="text-[var(--yellow)] text-2xl">✦</span>
           {w}
         </span>
@@ -30,7 +30,7 @@ const qualities = [
     </div>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 mt-12">
+  <div class="max-w-6xl mx-auto px-6 mt-14">
 
     <!-- TITULO -->
     <h2 class="text-5xl md:text-6xl font-extrabold">
@@ -42,20 +42,20 @@ const qualities = [
       Todos necesitamos un poco...
     </p>
 
-    <!-- COLLAGE -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- COLLAGE ARTÍSTICO -->
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
       {items.map((it) => (
-        <article class={`relative ${it.rotate} transition-all duration-300 hover:rotate-0 hover:scale-[1.02]`}>
-          <div class="border-4 border-black bg-white p-3 shadow-[10px_10px_0px_black]">
+        <article class={`relative ${it.rotate} transition-all duration-300 hover:rotate-0 hover:scale-[1.03]`}>
+          <div class="border-4 border-black bg-white p-4 shadow-[12px_12px_0px_black]">
 
             <img
               src={it.img}
               alt={it.title}
-              class="w-full h-[260px] object-contain bg-white border-2 border-black p-2"
+              class="w-full h-[280px] object-contain bg-white border-2 border-black p-3"
               loading="lazy"
             />
 
-            <div class="mt-3 flex items-center justify-between gap-3">
+            <div class="mt-4 flex items-center justify-between gap-3">
               <h3 class="text-2xl font-bold">{it.title}</h3>
               <span class="text-sm font-bold border-2 border-black px-3 py-1 bg-blue-200">
                 {it.tag}
@@ -73,7 +73,7 @@ const qualities = [
 
 <style>
   .marquee {
-    animation: marquee 14s linear infinite;
+    animation: marquee 13s linear infinite;
     will-change: transform;
   }
 

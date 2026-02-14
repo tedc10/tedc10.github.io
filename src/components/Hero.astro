@@ -26,23 +26,24 @@ import hl from '../assets/hl.svg'
     </p>
 
     <!-- BOTÓN + HL -->
-    <div class="mt-10 flex items-center gap-4">
+  <div class="mt-10 relative flex items-center">
 
-      <a
-        href="/presentacion"
-        class="inline-block bg-blue-200 border-4 border-black px-10 py-4 rounded-full text-xl md:text-2xl font-semibold shadow-[5px_5px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
-      >
-        vamos
-      </a>
+  <a
+    href="/presentacion"
+    class="inline-block bg-blue-200 border-4 border-black px-10 py-4 rounded-full text-xl md:text-2xl font-semibold shadow-[5px_5px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
+  >
+    vamos
+  </a>
 
-      <!-- HL AHORA JUNTO AL BOTÓN -->
-      <img
-        src={hl.src}
-        alt="decor"
-        class="w-12 md:w-14"
-      />
+  <!-- HL POSICIONADO MANUALMENTE -->
+  <img
+    src={hl.src}
+    alt="decor"
+    class="absolute left-32 top-12 w-12 md:w-14"
+  />
 
-    </div>
+  </div>
+
 
   </div>
 

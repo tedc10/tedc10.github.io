@@ -6,15 +6,14 @@ import Footer from "../components/Footer.astro"
 
 <Layout>
   <div class="min-h-screen flex flex-col">
-
     <Header />
 
-    <!-- CONTENIDO CENTRAL -->
+    <!-- CENTRO -->
     <main class="relative flex-1 flex items-center justify-center text-center px-6 overflow-hidden">
 
-      <!-- FONDO -->
-      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-4 place-items-center 
-                  opacity-10 text-xl md:text-2xl font-bold 
+      <!-- FONDO CON CUALIDADES (LLENO, SIN HUECOS) -->
+      <div class="absolute inset-0 h-full grid grid-cols-4 md:grid-cols-6 grid-rows-6 gap-6
+                  place-items-center opacity-10 text-xl md:text-2xl font-bold
                   pointer-events-none select-none">
 
         <span>RESPONSABLE</span>
@@ -23,12 +22,14 @@ import Footer from "../components/Footer.astro"
         <span>RESPETUOSO</span>
         <span>APASIONADO</span>
         <span>BUGGY</span>
+
         <span>FAMILIA</span>
         <span>FÚTBOL</span>
         <span>MESSI</span>
         <span>ALEGRE</span>
         <span>EMPÁTICO</span>
         <span>DISCIPLINA</span>
+
         <span>CONSTANCIA</span>
         <span>COMPROMISO</span>
         <span>ENERGÍA</span>
@@ -36,28 +37,45 @@ import Footer from "../components/Footer.astro"
         <span>HUMILDE</span>
         <span>DEDICACIÓN</span>
 
+        <span>PERSEVERANCIA</span>
+        <span>VALORES</span>
+        <span>ESFUERZO</span>
+        <span>MOTIVACIÓN</span>
+        <span>PROGRESO</span>
+        <span>SUPERACIÓN</span>
+
+        <span>TRABAJO EN EQUIPO</span>
+        <span>APRENDIZAJE</span>
+        <span>CONFIANZA</span>
+        <span>PASIÓN</span>
+        <span>CARISMA</span>
+        <span>VISIÓN</span>
+
+        <span>DETERMINACIÓN</span>
+        <span>INTEGRIDAD</span>
+        <span>ENTREGA</span>
+        <span>CRECIMIENTO</span>
+        <span>ENFOQUE</span>
+        <span>COMPROMETIDO</span>
+
       </div>
 
       <!-- CONTENIDO -->
       <div class="relative z-10 max-w-2xl">
-
         <h1 class="text-4xl md:text-6xl font-extrabold border-4 border-black px-8 py-6 bg-white shadow-[6px_6px_0px_black]">
           Algo más sobre mí
         </h1>
 
-        <a 
+        <a
           href="https://youtu.be/7p4uv-mc2v4"
           target="_blank"
           class="mt-6 inline-block text-xl md:text-2xl font-bold bg-yellow-300 border-4 border-black px-10 py-4 shadow-[6px_6px_0px_black] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200"
         >
           Ver video completo
         </a>
-
       </div>
-
     </main>
 
     <Footer />
-
   </div>
 </Layout>

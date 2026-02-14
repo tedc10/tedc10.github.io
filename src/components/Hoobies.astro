@@ -1,0 +1,42 @@
+---
+const items = [
+  { title: "Messi", img: "/messi.jpeg", rotate: "-rotate-2", tag: "GOAT 🐐" },
+  { title: "Buggy", img: "/buggy.jpeg", rotate: "rotate-2", tag: "Mi vida 🐶" },
+  { title: "Liverpool", img: "/liverpool.jpeg", rotate: "-rotate-1", tag: "YNWA 🔴" },
+  { title: "Bad Bunny", img: "/badbunny.jpeg", rotate: "rotate-1", tag: "Vibra 🕺" },
+  { title: "Bruno Mars", img: "/brunomars.jpeg", rotate: "-rotate-2", tag: "Hits 🎶" },
+  { title: "Mora", img: "/mora.jpeg", rotate: "rotate-2", tag: "Flow 🌙" },
+]
+---
+
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="flex items-end justify-between gap-6 flex-wrap">
+    <h2 class="text-4xl md:text-6xl font-extrabold">
+      Lo que <span class="bg-[var(--yellow)] px-3 py-1 inline-block">me mueve</span>
+    </h2>
+    <p class="text-lg md:text-xl max-w-xl">
+      Cosas que me inspiran y me representan (sí, aquí está Buggy 🐶).
+    </p>
+  </div>
+
+  <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {items.map((it) => (
+      <article class={`relative ${it.rotate} transition-all duration-300 hover:rotate-0 hover:scale-[1.02]`}>
+        <div class="border-4 border-black bg-white p-3 shadow-[10px_10px_0px_black]">
+          <img
+            src={it.img}
+            alt={it.title}
+            class="w-full h-[240px] object-cover border-2 border-black"
+            loading="lazy"
+          />
+          <div class="mt-3 flex items-center justify-between gap-3">
+            <h3 class="text-2xl font-bold">{it.title}</h3>
+            <span class="text-sm font-bold border-2 border-black px-3 py-1 bg-blue-200">
+              {it.tag}
+            </span>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

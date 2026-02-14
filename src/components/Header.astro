@@ -1,72 +1,77 @@
 ---
 import logoStar from '../assets/logo-star.svg'
 import svgPinkStar from '../assets/pink-star.svg'
-import { author } from '../sample'
-
 
 const links = [
   { name: 'Presentación', path: '/presentacion', target: '_self' },
   { name: 'Evidencias', path: '/evidencias', target: '_self' },
 ]
-
 ---
 
-<header class="relative border-b-3 p-7 overflow-hidden">
-  <img src={svgPinkStar.src} alt="svg" width="80" class="absolute -right-9 -top-4" />
-  <img src={svgPinkStar.src} alt="svg" width="80" class="absolute -left-8 -bottom-5 hidden md:block" />
+<header class="relative border-b-3 p-6 overflow-hidden">
 
-  <div class="flex border-3 border-black bg-white max-w-[310px] md:max-w-xl m-auto relative z-10">
-    <!-- top boxes -->
+  <!-- Estrellitas decorativas -->
+  <img src={svgPinkStar.src} alt="svg" width="70" class="absolute -right-8 -top-4" />
+  <img src={svgPinkStar.src} alt="svg" width="70" class="absolute -left-8 -bottom-5 hidden md:block" />
+
+  <div class="flex border-3 border-black bg-white max-w-xl mx-auto relative z-10">
+
+    <!-- decoraciones esquinas -->
     <div class="size-2 bg-white border-2 border-black absolute -top-2 -right-2"></div>
     <div class="size-2 bg-white border-2 border-black absolute -top-2 -left-2"></div>
-
-    <!-- bottom boxes -->
     <div class="size-2 bg-white border-2 border-black absolute -bottom-2 -left-2"></div>
     <div class="size-2 bg-white border-2 border-black absolute -bottom-2 -right-2"></div>
 
-    <nav class="flex w-full items-center p-2 md:p-0">
-      <div class="flex-1 font-bold">
-        <a href="/" class="flex items-center gap-2 pl-3">
-          <img src={logoStar.src} alt="logo" width="26" /> {author.nickname}
+    <nav class="flex w-full items-center">
+
+      <!-- Título -->
+      <div class="flex-1 font-bold text-lg px-4 py-4">
+        <a href="/" class="flex items-center gap-2">
+          <img src={logoStar.src} alt="logo" width="24" />
+          Portafolio de Thomy
         </a>
       </div>
 
-      <a href="#" class="flex md:hidden" id="menu-open">
-        <i class="ri-menu-2-line text-2xl"></i>
-      </a>
-
+      <!-- Menú Desktop -->
       <ul class="hidden md:flex">
         {links.map((item) => (
-          <li class="border-l-2 border-black p-3 py-4">
+          <li class="border-l-2 border-black px-5 py-4">
             <a
               href={item.path}
               target={item.target}
-              class="whitespace-nowrap relative flex items-center before:absolute before:left-0 before:bottom-1 before:h-[8px] before:w-0 before:bg-[var(--yellow)] before:transition-all before:duration-300 hover:before:w-full"
+              class="font-semibold hover:text-[var(--yellow)] transition"
             >
-              <span class="relative z-5">{item.name}</span>
+              {item.name}
             </a>
           </li>
         ))}
       </ul>
+
+      <!-- Botón menú móvil -->
+      <a href="#" class="flex md:hidden px-4" id="menu-open">
+        <i class="ri-menu-2-line text-2xl"></i>
+      </a>
+
     </nav>
   </div>
 </header>
 
+<!-- Menú móvil -->
 <div
-  class="block md:hidden fixed left-0 top-0 h-full w-full bg-white z-20 p-3 transition-all duration-300 -translate-x-[100%]"
+  class="block md:hidden fixed left-0 top-0 h-full w-full bg-white z-20 p-6 transition-all duration-300 -translate-x-[100%]"
   id="menu-content"
 >
-  <div class="flex p-6">
+  <div class="flex mb-6">
     <h3 class="flex-1 font-bold uppercase">Menu</h3>
     <a href="#" id="menu-close">
       <i class="ri-close-line text-3xl"></i>
     </a>
   </div>
 
-  <ul class="flex flex-col justify-center items-center gap-4 md:hidden">
+  <ul class="flex flex-col gap-6 text-xl font-bold">
     {links.map((item) => (
-      <li class="py-3">
-        <a href={item.path} target={item.target} class="p-3 whitespace-nowrap text-2xl font-bold">
+      <li>
+        <a href={item.path} target={item.target}>
           {item.name}
         </a>
       </li>
@@ -90,7 +95,7 @@ const links = [
       menuContent?.classList.add('-translate-x-[100%]')
     })
 
-    menuContent?.querySelectorAll('li a').forEach((item) => {
+    menuContent?.querySelectorAll('a').forEach((item) => {
       item.addEventListener('click', () => {
         menuContent?.classList.add('-translate-x-[100%]')
       })

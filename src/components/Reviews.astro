@@ -1,16 +1,33 @@
 ---
-
+import redStar from '../assets/red-star.svg'
+import blueStar from '../assets/blue-star-card.svg'
 ---
 
 <section class="max-w-6xl mx-auto px-6 py-20">
 
-  <!-- TITULO NUEVO -->
-  <div class="mb-16">
-    <h2 class="text-5xl md:text-6xl font-extrabold">
-      Idiomas que <span class="bg-[var(--yellow)] px-3 py-1 inline-block">
-        expanden mi mundo
-      </span>
-    </h2>
+  <!-- TITULO MÁS INTERESANTE -->
+  <div class="relative mb-16">
+
+    <!-- Decoraciones -->
+    <img src={blueStar.src} alt="decor" class="absolute -top-8 -left-6 w-14 md:w-16" />
+    <img src={redStar.src} alt="decor" class="absolute -top-6 right-0 w-12 md:w-14" />
+
+    <div class="inline-block border-4 border-black bg-white px-8 py-5 shadow-[10px_10px_0px_black] rotate-[-1deg]">
+      <p class="text-sm font-bold uppercase tracking-widest">
+        Comunicación
+      </p>
+      <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        Idiomas que me
+        <span class="bg-[var(--yellow)] px-3 py-1 inline-block ml-2 rotate-[1deg]">
+          abren puertas
+        </span>
+      </h2>
+    </div>
+
+    <!-- Sticker -->
+    <div class="absolute -bottom-6 left-8 border-3 border-black bg-[var(--yellow)] px-4 py-2 font-bold rotate-[3deg] shadow-[6px_6px_0px_black]">
+      +3
+    </div>
   </div>
 
   <!-- TARJETAS -->
@@ -18,30 +35,42 @@
 
     <!-- ESPAÑOL -->
     <div class="border-4 border-black bg-white p-8 shadow-[10px_10px_0px_black] rotate-[-2deg] max-w-xl">
-      <p class="text-xl md:text-2xl font-semibold">
-        Español
-      </p>
-      <p class="mt-4 text-lg">
+      <div class="flex items-center gap-4">
+        <img src="/espana.png" alt="España" class="w-10 h-10 object-contain border-2 border-black bg-white p-1" />
+        <p class="text-2xl font-extrabold">Español</p>
+        <span class="ml-auto text-sm font-bold border-2 border-black px-3 py-1 bg-blue-200">
+          Nativo
+        </span>
+      </div>
+      <p class="mt-5 text-lg">
         Mi lengua nativa. Es donde pienso, creo y me expreso con mayor naturalidad.
       </p>
     </div>
 
     <!-- INGLÉS -->
     <div class="border-4 border-black bg-white p-8 shadow-[10px_10px_0px_black] rotate-[2deg] max-w-xl self-end">
-      <p class="text-xl md:text-2xl font-semibold">
-        Inglés
-      </p>
-      <p class="mt-4 text-lg">
-        Me permite conectar con el mundo tech, documentación, recursos y comunidades globales.
+      <div class="flex items-center gap-4">
+        <img src="/usa.png" alt="USA" class="w-10 h-10 object-contain border-2 border-black bg-white p-1" />
+        <p class="text-2xl font-extrabold">Inglés</p>
+        <span class="ml-auto text-sm font-bold border-2 border-black px-3 py-1 bg-blue-200">
+          Intermedio
+        </span>
+      </div>
+      <p class="mt-5 text-lg">
+        Me permite conectar con el mundo tech: documentación, tutoriales y comunidades globales.
       </p>
     </div>
 
     <!-- PORTUGUÉS -->
     <div class="border-4 border-black bg-white p-8 shadow-[10px_10px_0px_black] rotate-[-1deg] max-w-xl">
-      <p class="text-xl md:text-2xl font-semibold">
-        Portugués
-      </p>
-      <p class="mt-4 text-lg">
+      <div class="flex items-center gap-4">
+        <img src="/brasil.png" alt="Brasil" class="w-10 h-10 object-contain border-2 border-black bg-white p-1" />
+        <p class="text-2xl font-extrabold">Portugués</p>
+        <span class="ml-auto text-sm font-bold border-2 border-black px-3 py-1 bg-blue-200">
+          Aprendiendo
+        </span>
+      </div>
+      <p class="mt-5 text-lg">
         Un idioma que estoy fortaleciendo y que me abre nuevas puertas culturales y profesionales.
       </p>
     </div>

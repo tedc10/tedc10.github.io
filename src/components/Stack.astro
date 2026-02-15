@@ -1,30 +1,36 @@
 ---
-const backend = [
-  { name: "Java", img: "/java.png" },
-  { name: "Python", img: "/python.png" },
-  { name: "Node.js", img: "/nodejs.png" },
-]
-
-const frontend = [
-  { name: "HTML", img: "/html.png" },
-  { name: "CSS", img: "/css.png" },
-  { name: "Angular", img: "/angular.png" },
-  { name: "Astro", img: "/astro.png" },
-]
-
-const database = [
-  { name: "MySQL", img: "/mysql.png" },
-]
-
-const tools = [
-  { name: "GitHub", img: "/github.png" },
+const groups = [
+  {
+    title: "Backend",
+    items: [
+      { name: "Java", img: "/java.png" },
+      { name: "Python", img: "/python.png" },
+      { name: "Node.js", img: "/nodejs.png" },
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      { name: "HTML", img: "/html.png" },
+      { name: "CSS", img: "/css.png" },
+      { name: "Angular", img: "/angular.png" },
+    ],
+  },
+  {
+    title: "Base de Datos",
+    items: [{ name: "MySQL", img: "/mysql.png" }],
+  },
+  {
+    title: "Herramientas",
+    items: [{ name: "GitHub", img: "/github.png" }],
+  },
 ]
 ---
 
 <section class="max-w-6xl mx-auto px-6 py-24">
 
-  <!-- NUEVO TITULO DIFERENTE -->
-  <div class="text-center mb-20">
+  <!-- TITULO NUEVO (SIN AMARILLO) -->
+  <div class="text-center mb-16">
     <p class="uppercase tracking-[6px] text-sm font-bold">
       STACK
     </p>
@@ -34,60 +40,32 @@ const tools = [
     <div class="w-24 h-[3px] bg-black mx-auto mt-6"></div>
   </div>
 
-  <!-- BACKEND -->
-  <div class="mb-20">
-    <h3 class="text-3xl font-bold mb-10">Backend</h3>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-      {backend.map((tech) => (
-        <div class="flex items-center gap-5 border-b-2 border-black pb-4">
-          <img src={tech.img} alt={tech.name} class="w-12 h-12 object-contain" />
-          <p class="text-xl font-semibold">{tech.name}</p>
+  <!-- GRUPOS -->
+  <div class="grid gap-14">
+    {groups.map((g) => (
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <h3 class="text-3xl font-bold">{g.title}</h3>
+          <div class="flex-1 h-[2px] bg-black/20"></div>
         </div>
-      ))}
-    </div>
-  </div>
 
-  <!-- FRONTEND -->
-  <div class="mb-20">
-    <h3 class="text-3xl font-bold mb-10">Frontend</h3>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-      {frontend.map((tech) => (
-        <div class="flex items-center gap-5 border-b-2 border-black pb-4">
-          <img src={tech.img} alt={tech.name} class="w-12 h-12 object-contain" />
-          <p class="text-xl font-semibold">{tech.name}</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
+          {g.items.map((tech) => (
+            <div class="flex flex-col items-center transition-all duration-300 hover:scale-110">
+              <div class="border-4 border-black bg-white p-6 shadow-[8px_8px_0px_black]">
+                <img
+                  src={tech.img}
+                  alt={tech.name}
+                  class="w-20 h-20 object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <p class="mt-4 text-lg font-bold">{tech.name}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-
-  <!-- DATABASE -->
-  <div class="mb-20">
-    <h3 class="text-3xl font-bold mb-10">Base de Datos</h3>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-      {database.map((tech) => (
-        <div class="flex items-center gap-5 border-b-2 border-black pb-4">
-          <img src={tech.img} alt={tech.name} class="w-12 h-12 object-contain" />
-          <p class="text-xl font-semibold">{tech.name}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <!-- TOOLS -->
-  <div>
-    <h3 class="text-3xl font-bold mb-10">Herramientas</h3>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-      {tools.map((tech) => (
-        <div class="flex items-center gap-5 border-b-2 border-black pb-4">
-          <img src={tech.img} alt={tech.name} class="w-12 h-12 object-contain" />
-          <p class="text-xl font-semibold">{tech.name}</p>
-        </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
 
 </section>

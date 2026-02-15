@@ -1,4 +1,4 @@
----
+
 import logoStar from '../assets/logo-star.svg'
 import svgPinkStar from '../assets/pink-star.svg'
 
@@ -6,7 +6,7 @@ const links = [
   { name: 'Presentación', path: '/presentacion', target: '_self' },
   { name: 'Evidencias', path: '/evidencias', target: '_self' },
 ]
----
+
 
 <header class="relative border-b-3 p-6 overflow-hidden">
 
@@ -16,7 +16,6 @@ const links = [
 
   <div class="flex border-3 border-black bg-white max-w-xl mx-auto relative z-10">
 
-    <!-- decoraciones esquinas -->
     <div class="size-2 bg-white border-2 border-black absolute -top-2 -right-2"></div>
     <div class="size-2 bg-white border-2 border-black absolute -top-2 -left-2"></div>
     <div class="size-2 bg-white border-2 border-black absolute -bottom-2 -left-2"></div>
@@ -24,7 +23,6 @@ const links = [
 
     <nav class="flex w-full items-center">
 
-      <!-- Título -->
       <div class="flex-1 font-bold text-lg px-4 py-4">
         <a href="/" class="flex items-center gap-2">
           <img src={logoStar.src} alt="logo" width="24" />
@@ -32,7 +30,6 @@ const links = [
         </a>
       </div>
 
-      <!-- Menú Desktop -->
       <ul class="hidden md:flex">
         {links.map((item) => (
           <li class="border-l-2 border-black px-5 py-4">
@@ -47,7 +44,6 @@ const links = [
         ))}
       </ul>
 
-      <!-- Botón menú móvil -->
       <a href="#" class="flex md:hidden px-4" id="menu-open">
         <i class="ri-menu-2-line text-2xl"></i>
       </a>
@@ -56,7 +52,6 @@ const links = [
   </div>
 </header>
 
-<!-- Menú móvil -->
 <div
   class="block md:hidden fixed left-0 top-0 h-full w-full bg-white z-20 p-6 transition-all duration-300 -translate-x-[100%]"
   id="menu-content"

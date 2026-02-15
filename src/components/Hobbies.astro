@@ -17,7 +17,7 @@ const qualities = [
 
 <section class="w-full pt-2 pb-16">
 
-  <!-- BARRA SUPERIOR -->
+
   <div class="w-full border-y-4 border-black bg-black text-white overflow-hidden">
     <div class="marquee flex gap-16 py-7 text-xl md:text-2xl font-bold uppercase whitespace-nowrap">
       {[...qualities, ...qualities].map((w) => (
@@ -31,17 +31,14 @@ const qualities = [
 
   <div class="max-w-6xl mx-auto px-6 mt-14">
 
-    <!-- TITULO -->
     <h2 class="text-5xl md:text-6xl font-extrabold">
       Mi inspiración
     </h2>
 
-    <!-- TEXTO -->
     <p class="mt-6 text-xl md:text-2xl max-w-xl">
       Todos necesitamos un poco...
     </p>
 
-    <!-- COLLAGE -->
     <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
       {items.map((it) => (
         <article class={`relative ${it.rotate} transition-all duration-300 hover:rotate-0 hover:scale-[1.03]`}>
